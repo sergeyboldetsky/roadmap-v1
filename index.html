@@ -1,0 +1,128 @@
+<div class="roadmap-wrapper">
+<section class="roadmap-intro">
+  <div class="roadmap-intro-tittle">
+    <div class="roadmap-intro-tittle-small">Roadmap</div>  
+  </div>
+  </section>
+  <section class="timeline">
+    <ul>
+      <li>
+        <div class="timeline-card">
+          <h1>Q3 2017</h1>
+          <p><b>[Process]</b> Idea inception and market analysis</p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-card">
+          <h1>Q4 2017</h1>
+          <p><b>[Process]</b> Blockchain scalability problem research</p>
+          <p><b>[Process]</b> Development of the platform core started</p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-card">
+          <h1>Q1 2018</h1>
+          <p><b>[Process]</b> Prototype release</p>
+          <p><b>[Process]</b> Incorporation in Delaware, USA</p>
+          <p><b>[Process]</b> Seed round: $350 000 raised</p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-card">
+          <h1>Q2 2018</h1>
+          <p><b>[Process]</b> Alpha release</p>
+          <p><b>[Process]</b> Blockchain technology finalization and integration</p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-card">
+          <h1>Q3 2018</h1>
+          <p><b>[Process]</b> Beta release</p>
+          <p><b>[Process]</b> Public app release (iOS, Android)</p>
+          <p><b>[Process]</b> Patent filing in other countries</p>
+          <p><b>[Industry]</b> Auth plugins for popular platforms
+            and frameworks (Shopify, Wordpress, Passport.js)</p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-card">
+          <h1>Q4 2018</h1>
+          <p><b>[Process]</b> Multi-language support</p>
+          <p><b>[Process]</b> Employment verification and screening</p>
+          <p><b>[Process]</b> Education & professional qualifications verification</p>
+          <p><b>[Industry]</b> Recruiting software integration (Lever, Greenhouse,
+            TriNet, ZipRecruiter)</p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-card">
+          <h1>Q1 2019</h1>
+          <p><b>[Geo]</b> Expansion to Canada and South America</p>
+          <p><b>[Process]</b> Developer community establishment</p>
+          <p><b>[Industry]</b> Vending machines & specialty ATMs</p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-card">
+          <h1>Q2 2019</h1>
+          <p><b>[Geo]</b> Expansion to Asia and Oceania</p>
+          <p><b>[Process]</b> 3rd party developer SDK release</p>
+          <p><b>[Industry]</b> 3rd party auth solutions integration (Auth0,
+            Okta, Duo Security)</p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-card">
+          <h1>Q3 2019</h1>
+          <p><b>[Geo]</b> Expansion to Europe & Middle East</p>
+          <p><b>[Industry]</b> Corporate market solution (MFA, SSO, AD)</p>
+          <p><b>[Industry]</b> Dedicated FinTech solutions</p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-card">
+          <h1>Q4 2019</h1>
+          <p><b>[Geo]</b> Expansion to Africa</p>
+          <p><b>[Process]</b> 3rd party app marketplace launch</p>
+          <p><b>[Industry]</b> Machine-to-machine auth integration (IoT devices)</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+
+<script>
+  (function() {
+
+'use strict';
+
+// define variables
+var items = document.querySelectorAll(".timeline li");
+
+// check if an element is in viewport
+// http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      items[i].classList.add("in-view");
+    }
+  }
+}
+
+// listen for events
+window.addEventListener("load", callbackFunc);
+window.addEventListener("resize", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+
+})();
+</script>
